@@ -18,62 +18,53 @@ public class UNIVERSIDAD {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // Crear pacientes
-        Scanner leer = new Scanner(System.in);
-        ArrayList<String> nombres=new ArrayList();
-        ArrayList<Integer> salarioDia = new ArrayList();
-        ArrayList<Integer> dia = new ArrayList();
-        ArrayList<Integer> total = new ArrayList();
-
-        // Agregar pacientes a una lista
-        List<Paciente> pacientes = new ArrayList<Paciente>();
-        pacientes.add(paciente1);
-        pacientes.add(paciente2);
-        pacientes.add(paciente3);
-        pacientes.add(paciente4);
-        pacientes.add(paciente5);
-        pacientes.add(paciente6);
-
-        // Imprimir datos de los pacientes (usando un loop For-each introducido en "Java 8")
-        System.out.println("Todos los pacientes:");
-        for (Paciente pacienteActual : pacientes) {
-            System.out.println(pacienteActual.getId() + ", " + 
-                    pacienteActual.getNombre() + ", " + 
-                    pacienteActual.getApellido() + ", " + 
-                    pacienteActual.getEdad() + ", " + 
-                    pacienteActual.getDireccion() + ", " + 
-                    pacienteActual.getTelefono());
-        }
-
-        // Obtener los datos del paciente con el ID = 4
-        System.out.println("\nPaciente con el ID = 4:");
-        System.out.println(pacientes.get(3).getId() + ", " +
-                pacientes.get(3).getNombre() + ", " +
-                pacientes.get(3).getApellido() + ", " + 
-                pacientes.get(3).getEdad() + ", " + 
-                pacientes.get(3).getDireccion() + ", " + 
-                pacientes.get(3).getTelefono());
-
-        // Modificar el nombre del paciente con el ID = 2 e imprimirlo
-        System.out.println("\nNombre nuevo del paciente con el ID = 2:");
-        pacientes.get(1).setNombre("Nuevo nombre");
-        System.out.println(pacientes.get(1).getId() + ", " + pacientes.get(1).getNombre());
-
-        // Modificando los datos de todos los pacientes
-        for (Paciente pacienteActual : pacientes) {
-            pacienteActual.setId(11);
-            pacienteActual.setNombre("Otro1");
-            pacienteActual.setApellido("Otro");
-            pacienteActual.setEdad(51);
-            pacienteActual.setDireccion("Nueva");
-            pacienteActual.setTelefono(123456);
-        }
-
-        // Vaciar la lista de pacientes
-        pacientes.clear();
-        System.out.println("\nTamaño de la lista: " + pacientes.size());
-    }
-}
+      Scanner leer = new Scanner(System.in);
+      ArrayList<Alumnos> Alumnos = new ArrayList<Alumnos>();
+      ArrayList<Docente> Docente = new ArrayList<Docente>();
+      ArrayList<administrativo> administrativo = new ArrayList<administrativo>();
+      ArrayList<catedraticos> catedraticos = new ArrayList<catedraticos>();
+      ArrayList<personal> personal = new ArrayList<personal>();
+      ArrayList<planta> planta = new ArrayList<planta>();
+      int deci,ac,decision,accion=1;
+      
+      System.out.println("Elige el tipo de usuario (1.Docente,2.Alumnos,3.Administrativos)");
+      deci=leer.nextInt();
+      switch(deci){
+          case 1:
+              System.out.println("1.Catedratico, 2.Planta");
+              decision=leer.nextInt();
+              if(decision==1){
+              System.out.println("1.Agrega, 2.Modifica, 3.Elimina");
+              ac=leer.nextInt();
+              if(ac==1){
+                  while(accion!=0){
+                      System.out.println("Ingrese el nombre del catedratico");
+                      catedraticos.add(new catedraticos(leer.next( )));
+                  }
+              }
+              if(decision==2){
+              System.out.println("1.Agregar");
+              System.out.println("2.Modificar");
+              System.out.println("3.Eliminar");
+              deci=leer.nextInt();   
+              }
+              break;
+          case 2:
+              System.out.println("1.Agregar");
+              System.out.println("2.Modificar");
+              System.out.println("3.Eliminar");
+              acc=leer.nextInt();
+              break;
+          case 3:
+              System.out.println("1.Agregar");
+              System.out.println("2.Modificar");
+              System.out.println("3.Eliminar");
+              acc=leer.nextInt();
+              break;
+            }
+       }
+         
+    }}
                 
                 
                 
