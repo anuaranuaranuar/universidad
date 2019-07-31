@@ -10,6 +10,8 @@ package universidad;
  * @author CBN
  */
 public class Alumnos extends personal{
+
+    
     protected String codigo, facultad, programa;
     protected int semestre;
 
@@ -20,6 +22,10 @@ public class Alumnos extends personal{
         this.programa = programa;
         this.semestre = semestre;
     }
+    public String mostrar(){
+        String resultado =" ";
+        resultado=mostrarInfo()+"\t"+codigo+"\t"+facultad+"\t"+programa+"\t"+semestre;
+        return resultado;    }
 
     
 
